@@ -69,6 +69,15 @@ class _HomeState extends State<Home> {
                 );
               },
             ),
+            ListTile(
+              leading: const Icon(Icons.man),
+              title: const Text("파트너 구하기"),
+              onTap: () {
+                Navigator.of(context).pushReplacementNamed(
+                  '/together',
+                );
+              },
+            ),
             if (widget.isLoggedIn) // 로그인 상태에 따라 로그아웃 버튼 표시 여부를 설정
               ListTile(
                 leading: const Icon(Icons.logout),

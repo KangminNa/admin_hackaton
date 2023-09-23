@@ -107,9 +107,18 @@ class _HelpState extends State<Help> {
               leading: const Icon(Icons.share),
               title: const Text("공유"),
               onTap: () {
-                // 공유 버튼 눌렀을 때의 동작 추가
-                // 예를 들어, 공유 기능을 실행하는 코드를 여기에 추가
-                Navigator.pop(context); // 메뉴를 닫습니다.
+                Navigator.of(context).pushReplacementNamed(
+                  '/share',
+                );
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.man),
+              title: const Text("파트너 구하기"),
+              onTap: () {
+                Navigator.of(context).pushReplacementNamed(
+                  '/together',
+                );
               },
             ),
             if (widget.isLoggedIn) // 로그인 상태에 따라 로그아웃 버튼 표시 여부를 설정

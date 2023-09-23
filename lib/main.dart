@@ -3,6 +3,7 @@ import 'package:admin_hackaton/screens/help.dart';
 import 'package:admin_hackaton/screens/home.dart';
 import 'package:admin_hackaton/screens/memo.dart';
 import 'package:admin_hackaton/screens/sharing.dart';
+import 'package:admin_hackaton/screens/together.dart';
 
 import 'package:flutter/material.dart';
 import 'package:admin_hackaton/screens/login.dart';
@@ -38,6 +39,9 @@ class MyApp extends StatelessWidget {
               isLoggedIn: true,
             ),
         '/share': (context) => const Share(
+              isLoggedIn: true,
+            ),
+        '/together': (context) => const Together(
               isLoggedIn: true,
             ),
       },

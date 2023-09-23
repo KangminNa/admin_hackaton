@@ -101,6 +101,22 @@ class _LoginPageState extends State<LoginPage> {
                   TextButton(
                     onPressed: () {
                       // "만든이들" 버튼을 눌렀을 때 지정한 URL로 이동
+                      const siteURL = "https://study-5573d.web.app/#/home";
+                      _launchURL(siteURL); // Launch the URL here
+                    },
+                    child: const Text(
+                      "지방기업 플랫폼 바로가기",
+                      style: TextStyle(
+                        fontSize: 30,
+                      ),
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  TextButton(
+                    onPressed: () {
+                      // "만든이들" 버튼을 눌렀을 때 지정한 URL로 이동
                       const siteURL =
                           "https://seonghwan1101.github.io/hacker/Team.html";
                       _launchURL(siteURL); // Launch the URL here

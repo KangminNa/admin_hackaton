@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class Share extends StatefulWidget {
+class Together extends StatefulWidget {
   final bool isLoggedIn; // 로그인 상태를 받을 변수
 
-  const Share({Key? key, required this.isLoggedIn}) : super(key: key);
+  const Together({Key? key, required this.isLoggedIn}) : super(key: key);
 
   @override
-  _ShareState createState() => _ShareState();
+  _TogetherState createState() => _TogetherState();
 }
 
-class _ShareState extends State<Share> {
+class _TogetherState extends State<Together> {
   final TextEditingController _titleController = TextEditingController();
   final TextEditingController _subContentController = TextEditingController();
   final TextEditingController _mainContentController = TextEditingController();
@@ -81,7 +81,7 @@ class _ShareState extends State<Share> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("글 공유"),
+        title: const Text("파트너 구하기"),
       ),
       drawer: Drawer(
         child: ListView(
@@ -195,7 +195,7 @@ class _ShareState extends State<Share> {
                   const SizedBox(height: 16.0),
                   // 나머지 입력 필드들을 추가하세요.
                   const Text(
-                    "부 제목",
+                    "인원 수",
                     style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                   ),
                   TextField(
@@ -229,7 +229,7 @@ class _ShareState extends State<Share> {
                   ),
                   const SizedBox(height: 16.0),
                   const Text(
-                    "내용",
+                    "시급",
                     style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                   ),
                   TextField(
@@ -275,7 +275,7 @@ class _ShareState extends State<Share> {
             const SizedBox(height: 16.0),
             const Center(
               child: Text(
-                "작성된 글 목록",
+                "모집 공고 목록",
                 style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
               ),
             ),
@@ -318,10 +318,10 @@ class _ShareState extends State<Share> {
                                 onPressed: () {
                                   // "공유하기" 버튼을 눌렀을 때 지정한 URL을 공유
                                   const siteURL =
-                                      "https://study-5573d.web.app/#/screen6";
+                                      "https://study-5573d.web.app/#/screen5";
                                   _launchURL(siteURL); // Launch the URL here
                                 },
-                                child: const Center(child: Text("공유하기")),
+                                child: const Center(child: Text("모집 글 올리기")),
                               ),
                             ),
                           ],
