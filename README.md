@@ -8,3 +8,6 @@
 1. 서버 X
 2. 기업 관리 페이지
 3. flutter build web
+
+### Url
+https://admin-hackaton.web.app/
